@@ -7,33 +7,57 @@
  * to inject Tailwind's styles into your CSS.
  * For more information, see: https://tailwindcss.com/docs/installation
  */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 /**
  * END --- SETUP TAILWINDCSS EDIT
  */
 
 @layer base {
   svg {
-    fill: currentColor;
+    @apply fill-current
+  }
+
+  label {
+    @apply font-handwriting text-xl uppercase tracking-tighter
+  }
+
+  label:has(+ input:placeholder-shown) {
+    @apply absolute left-8 top-8 text-3xl pointer-events-none transition-all duration-300
+  }
+
+  label:has(+ input),
+  label:has(+ input:focus) {
+    @apply absolute top-2 left-2 text-xl
+  }
+
+  input[type='text'],
+  input[type='email'],
+  input[type='passwordd'],
+  input[type='number'],
+  input[type='tel'],
+  input[type='url'] {
+    @apply h-[100px] w-full border-2 border-black px-7 font-sans text-2xl
+  }
+
+  label:has(+ input:invalid:not(:placeholder-shown)) {
+    @apply text-white
+  }
+
+  input:invalid:not(:placeholder-shown) {
+    @apply bg-orangeRed border-fireEngineRed
   }
 }
 
 @layer components {
   .indicator {
-    height: 1.5rem;
-    width: 1.5rem;
-    border-radius: 9999px;
-    border-width: 2px;
-    border-color: #fff;
+    @apply center h-6 w-6 rounded-full border-2
   }
 }
 
 @layer utilities {
   .center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @apply flex items-center justify-center
   }
 }
