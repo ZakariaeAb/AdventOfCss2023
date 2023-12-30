@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Bebas+Neue&family=Inter:wght@400;500;700&family=Kalam:wght@700&display=swap');
+
 /**
  * START --- SETUP TAILWINDCSS EDIT
  *
@@ -12,3 +13,27 @@
 /**
  * END --- SETUP TAILWINDCSS EDIT
  */
+
+@layer base {
+  svg {
+    fill: currentColor;
+  }
+}
+
+@layer components {
+  .indicator {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 9999px;
+    border-width: 2px;
+    border-color: #fff;
+  }
+}
+
+@layer utilities {
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
