@@ -27,6 +27,9 @@ module.exports = {
       width: {
         18: '72px',
       },
+      backgroundImage: {
+        auth: 'url("/images/bg__auth.svg")'
+      },
     },
     fontFamily: {
       condensed: ['Bebas Neue', 'sans-serif'],
