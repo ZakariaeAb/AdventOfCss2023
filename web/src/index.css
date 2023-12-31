@@ -48,6 +48,10 @@
   input:invalid:not(:placeholder-shown) {
     @apply bg-orangeRed border-fireEngineRed
   }
+
+  main {
+    @apply relative z-10 mb-[350px] overflow-scroll
+  }
 }
 
 @layer components {
