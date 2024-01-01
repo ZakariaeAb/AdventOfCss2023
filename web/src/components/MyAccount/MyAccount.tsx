@@ -11,7 +11,7 @@ const MyAccount = () => {
   }
 
   return (
-    <div className="absolute right-6 top-6 text-black dark:text-white">
+    <div className="text-black dark:text-white">
       <button
         className="mb-4 flex items-center justify-center gap-[12px]"
         onClick={handleDropDown}
