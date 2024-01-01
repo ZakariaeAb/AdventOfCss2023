@@ -12,22 +12,15 @@
 
 import type { Meta, StoryObj } from '@storybook/react'
 
-import Hamburger from './Hamburger'
+import Nav from './Nav'
 
-const meta: Meta<typeof Hamburger> = {
-  component: Hamburger,
+const meta: Meta<typeof Nav> = {
+  component: Nav,
   tags: ['autodocs'],
 }
 
 export default meta
 
-type Story = StoryObj<typeof Hamburger>
+type Story = StoryObj<typeof Nav>
 
-export const HamburgerShowing: Story = {
-  args :{
-    isHamburger: true,
-    toggleNav: () => {
-
-    }
-  }
-}
+export const Primary: Story = {}
