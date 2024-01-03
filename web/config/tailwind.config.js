@@ -28,7 +28,9 @@ module.exports = {
         18: '72px',
       },
       backgroundImage: {
-        auth: 'url("/images/bg__auth.svg")'
+        auth: 'url("/images/bg__auth.svg")',
+        checked: 'url("/images/checkbox--checked.svg")',
+        unchecked: 'url("/images/checkbox--unchecked.svg")',
       },
     },
     fontFamily: {
