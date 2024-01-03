@@ -16,20 +16,20 @@
 
 @layer base {
   svg {
-    @apply fill-current
+    @apply fill-current;
   }
 
   label {
-    @apply font-handwriting text-xl uppercase tracking-tighter
+    @apply font-handwriting text-xl uppercase tracking-tighter;
   }
 
   label:has(+ input:placeholder-shown) {
-    @apply absolute left-8 top-8 text-3xl pointer-events-none transition-all duration-300
+    @apply pointer-events-none absolute left-8 top-8 text-3xl transition-all duration-300;
   }
 
   label:has(+ input),
   label:has(+ input:focus) {
-    @apply absolute top-2 left-2 text-xl
+    @apply absolute left-2 top-2 text-xl;
   }
 
   input[type='text'],
@@ -38,59 +38,77 @@
   input[type='number'],
   input[type='tel'],
   input[type='url'] {
-    @apply h-[100px] w-full border-2 border-black px-7 font-sans text-2xl
+    @apply h-[100px] w-full border-2 border-black px-7 font-sans text-2xl;
   }
 
   label:has(+ input:invalid:not(:placeholder-shown)) {
-    @apply text-white
+    @apply text-white;
   }
 
   input:invalid:not(:placeholder-shown) {
-    @apply bg-orangeRed border-fireEngineRed
+    @apply border-fireEngineRed bg-orangeRed;
   }
 
   main {
-    @apply relative z-10 mb-[350px] overflow-scroll
+    @apply relative z-10 mb-[350px] overflow-scroll;
+  }
+
+  .checkbox-field {
+    @apply mb-4 flex items-center gap-4
+  }
+
+  input[type='checkbox'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    @apply appearance-none h-[40px] w-[40px] bg-unchecked bg-center bg-no-repeat
+  }
+
+  input[type='checkbox'] + label {
+    @apply cursor-pointer
+  }
+
+  input[type='checkbox']:checked {
+    @apply bg-checked
   }
 }
 
 @layer components {
   .indicator {
-    @apply center h-6 w-6 rounded-full border-2
+    @apply center h-6 w-6 rounded-full border-2;
   }
 
   .top-nav li {
-    @apply font-condensed tracking-wide text-6xl uppercase leading-none
+    @apply font-condensed text-6xl uppercase leading-none tracking-wide;
   }
 
   .top-nav li a {
-    @apply hover:text-orangeRed
+    @apply hover:text-orangeRed;
   }
 
   .bottom-nav ul a {
-    @apply hover:text-orangeRed
+    @apply hover:text-orangeRed;
   }
 
   .dropdown-menu {
-    @apply relative bg-white py-5 pl-4 pr-5
+    @apply relative bg-white py-5 pl-4 pr-5;
   }
 
   .dropdown-menu ul {
-    @apply flex flex-col gap-2
+    @apply flex flex-col gap-2;
   }
 
   .dropdown-menu li {
-    @apply flex items-center gap-3 font-condensed uppercase text-3xl text-black
+    @apply flex items-center gap-3 font-condensed text-3xl uppercase text-black;
   }
 
   .dropdown-menu::before {
-    content: "";
-    @apply absolute border-[12px] border-transparent border-b-white -top-6 left-16
+    content: '';
+    @apply absolute -top-6 left-16 border-[12px] border-transparent border-b-white;
   }
 }
 
 @layer utilities {
   .center {
-    @apply flex items-center justify-center
+    @apply flex items-center justify-center;
   }
 }
