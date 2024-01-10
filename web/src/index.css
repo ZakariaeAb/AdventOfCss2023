@@ -19,7 +19,8 @@
     @apply fill-current;
   }
 
-  label {
+  label,
+  .label {
     @apply font-handwriting text-xl uppercase tracking-tighter;
   }
 
@@ -127,6 +128,18 @@
   .with-rulers:after {
     content: '';
     @apply block h-[6px] w-[74px] bg-current;
+  }
+
+  .status-success {
+    @apply bg-spanishGreen text-white
+  }
+
+  .status-warning {
+    @apply bg-supernova text-black
+  }
+
+  .status-error {
+    @apply bg-orangeRed text-white
   }
 }
 
