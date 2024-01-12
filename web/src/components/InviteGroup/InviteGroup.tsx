@@ -4,7 +4,7 @@ import InviteCard from '../InviteCard/InviteCard'
 const InviteGroup = () => {
   return (
     <div>
-      <div className="label font-handwriting uppercase text-white">
+      <div className="label text-white">
         Invite a friend or family member
       </div>
       <div className="mb-10 flex items-center gap-5 bg-spanishGreen p-4 dark:bg-nileBlue">
